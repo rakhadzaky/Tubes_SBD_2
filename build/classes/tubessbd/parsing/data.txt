@@ -1,0 +1,4 @@
+P 4;B 8192;#
+Mahasiswa;nim,nama,alamat,ipk;R 128;n 1000;V 12;#
+MataKuliah;kode,nama,sks;R 8;n 150;V 6;#
+Registrasi;nim,kode,semester,tahun_ajar,nilai;R 10;n 1000;V 7;#

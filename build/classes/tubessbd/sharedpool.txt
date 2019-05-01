@@ -1,0 +1,1 @@
+Query = select * from mahasiswa;PROJECTION nim -- on the fly;Mahasiswa;Cost = 0.0 block;

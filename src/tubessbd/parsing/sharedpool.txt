@@ -1,0 +1,7 @@
+Query = select * from mahasiswa;PROJECTION nim -- on the fly;Mahasiswa;Cost = 0.0 block;
+Query = select nim,nama from mahasiswa;PROJECTION nim -- on the fly;Mahasiswa;Cost = 0.0 block;
+Query = select * from mahasiswa where nim="1";SELECTION nim="1" -- A1 Key;mahasiswa;Cost = 0.0 block;
+Query = select * from mahasiswa join registrasi using (nim);PROJECTION nim, nama, alamat, ipk -- on the fly;       JOIN mahasiswa.nim=registrasi.nim -- BNLJ;mahasiswa       registrasi;Cost(worst case) = 0.0 block;
+Query = select nim,nama from mahasiswa where nama="rakha";PROJECTION nim -- on the fly;SELECTION nama="rakha" -- A1 Non Key;mahasiswa;Cost = 0.0 block;
+Query = select nim,nama from mahasiswa join registrasi using (nim);PROJECTION nim -- on the fly;       JOIN mahasiswa.nim=registrasi.nim -- BNLJ;mahasiswa       registrasi;Cost(worst case) = 0.0 block;
+Query = select * from mahasiswa;PROJECTION nim -- on the fly;mahasiswa;Cost = 0.0 block;
